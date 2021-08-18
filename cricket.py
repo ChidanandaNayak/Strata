@@ -25,6 +25,8 @@ def cricket_algo():
     batting_order = []
     for _ in range(num_of_players):
         players = input("Batting Order for the team: P{order digit} Ex: 'P1'/'P2'/'P3' ")
+        while players in batting_order:
+            players = input("Please enter again P[order digit], {} already exists ".format(players))
         if not re.search(r'\d+', players) or not re.search(r'[pP]', players):
             error_msg = "Please enter as directed: P{order digit} Ex: P1/P2/P3"
             return error_msg
@@ -58,10 +60,8 @@ def cricket_algo():
 
         # swap players' position after each over
         swap_players_after_every_over(players_scoreboard)
-
         print("\n")
         print(result_calculation(players_scoreboard, _))
-
     return "\n Inning ended \nFinal score \n" + result_calculation(players_scoreboard, num_of_overs)
 
 
