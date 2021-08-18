@@ -67,7 +67,6 @@ def cricket_algo():
 
 def result_calculation(players_scoreboard,over):
     """
-
     :param players_scoreboard: dict
     :param over: int
     :return: string with total calculation
@@ -92,7 +91,6 @@ def result_calculation(players_scoreboard,over):
 def swap_players_after_every_over(players_scoreboard):
     """
     It exchanges value of currently active players on the fields
-
     :param players_scoreboard: dict
     :return: None
     """
@@ -107,7 +105,6 @@ def swap_players_after_every_over(players_scoreboard):
 
 def player_status(player_data, status=None):
     """
-
     :param player_data: all player's dictionary data
     :param status: on_field_players/batting_now
     :return: list object containing response
